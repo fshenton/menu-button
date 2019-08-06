@@ -43,8 +43,6 @@ function buildConfig(env, args){
 					test: /\.scss$/,
 					use: [
 						{
-							loader: "style-loader"
-						}, {
 							loader: "css-loader",	
 							options: {
 								modules: {

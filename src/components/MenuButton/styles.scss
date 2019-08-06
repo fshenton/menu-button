@@ -1,0 +1,25 @@
+.wrapper {
+	padding: 1em 1.62em;
+	border: 1px solid;
+	background-color: var(--color__bg);
+	transition: background-color .15s;
+	--color__bg: black;
+	--color__fg: white;
+
+	&:hover {
+		background-color: var(--color__fg);
+	
+		.label {
+			color: var(--color__bg);
+		}
+	}
+
+}
+
+	.label {
+		color: var(--color__fg);
+		transition: color .15s;
+
+	}
+
+
