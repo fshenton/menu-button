@@ -8,9 +8,16 @@ class MenuButton extends HTMLElement {
 		const clone = document.importNode(template.content, true);
 		const button = clone.querySelector("button");
 
-		button.addEventListener("click", () => console.log("heyyy"));
+		// this.menuButtonPressed = this.menuButtonPressed.bind(button);
+
+		button.addEventListener("click", this.menuButtonPressed);
 
 		shadow.appendChild(clone);
+	}
+	menuButtonPressed(event){
+		console.log("yay");
+
+		event.target.classList.toggle("change");
 	}
 }
 
