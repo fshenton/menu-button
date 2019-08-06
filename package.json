@@ -1,0 +1,24 @@
+{
+  "name": "menu-button",
+  "version": "1.0.0",
+  "description": "using web components to create a menu-button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fshenton/menu-button.git"
+  },
+  "author": "Frank Shenton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fshenton/menu-button/issues"
+  },
+  "homepage": "https://github.com/fshenton/menu-button#readme",
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
