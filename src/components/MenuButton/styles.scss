@@ -19,7 +19,13 @@
 	.label {
 		color: var(--color__fg);
 		transition: color .15s;
-
 	}
 
 
+.wrapper::before {
+	content: "";
+	display: inline-block;
+	background-color: red;
+	width: 1em;
+	height: 1em;
+}
