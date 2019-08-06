@@ -4,7 +4,8 @@
   "description": "using web components to create a menu-button",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-prod": "webpack --env.production",
+    "build-dev": "webpack-dev-server --env.development --open"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/fshenton/menu-button#readme",
   "devDependencies": {
     "css-loader": "^3.1.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",

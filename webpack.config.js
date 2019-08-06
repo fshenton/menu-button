@@ -4,13 +4,17 @@ const src = path.resolve(__dirname, "src");
 const dist = path.resolve(__dirname, "dist");
 
 function buildConfig(env){
-	const { NODE_ENV : environment } = env;
 
 	let modeOptions;
-	switch(environment) {
+	switch(env) {
 		case "development":
 			modeOptions = {
 				mode: "development",
+				output: {
+					filename: "main.js",
+					path: dist,
+					publicPath: "/"
+				},
 				devServer: {
 					contentBase: dist
 				}
@@ -20,6 +24,11 @@ function buildConfig(env){
 		default:
 			modeOptions = {
 				mode: "production",
+				output: {
+					filename: "main.js",
+					path: dist,
+					publicPath: "./"
+				}
 			}
 			break;
 	}
@@ -27,10 +36,6 @@ function buildConfig(env){
 	const config = {
 		entry: `${src}/index.js`,
 		...modeOptions,
-		output: {
-			filename: "main.js",
-			path: dist
-		},
 		module: {
 			rules: [
 				{
@@ -39,7 +44,7 @@ function buildConfig(env){
 						{
 							loader: "style-loader"
 						}, {
-							loader: "css-loader"
+							loader: "css-loader",	
 							options: {
 								modules: {
 									localIdentName: "[folder]__[local]"
@@ -56,7 +61,5 @@ function buildConfig(env){
 
 	return config;
 }
-
-
 
 module.exports = buildConfig;
