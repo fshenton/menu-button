@@ -3,10 +3,11 @@ const path = require("path");
 const src = path.resolve(__dirname, "src");
 const dist = path.resolve(__dirname, "dist");
 
-function buildConfig(env){
+function buildConfig(env, args){
+	const { mode } = args;
 
 	let modeOptions;
-	switch(env) {
+	switch(mode) {
 		case "development":
 			modeOptions = {
 				mode: "development",
