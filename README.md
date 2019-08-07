@@ -5,5 +5,5 @@ This is a bite-sized project that entails the creation of a menu-button using we
 Using:
 - node
 - webpack
-- css, sass and style-loaders
+- css & sass-loaders
 
