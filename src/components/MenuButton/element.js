@@ -1,23 +1,21 @@
 import template from "./template.js";
+import { locals as s } from "./styles.scss";
 
 class MenuButton extends HTMLElement {
 	constructor(){
 		super();
-
+		//create a shadow DOM and add new node, so that styles are isolated
 		const shadow = this.attachShadow({ "mode": "open" });
 		const clone = document.importNode(template.content, true);
 		const button = clone.querySelector("button");
-
-		// this.menuButtonPressed = this.menuButtonPressed.bind(button);
 
 		button.addEventListener("click", this.menuButtonPressed);
 
 		shadow.appendChild(clone);
 	}
 	menuButtonPressed(event){
-		console.log("yay");
-
-		event.target.classList.toggle("change");
+		//set the "change" class
+		event.target.classList.toggle(s.change);
 	}
 }
 
